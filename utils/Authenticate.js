@@ -1,0 +1,2 @@
+// const secretKey = crypto.randomBytes(32).toString('hex'); // Same secret key used for signing
+export const secretKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5NjYxOTY4MCwiZXhwIjoxNjk2NjIzMjgwfQ.qJOdOhU_Ab_tMoPC2D5-bE5zmh6uA336ohCp5pJEHbY"
