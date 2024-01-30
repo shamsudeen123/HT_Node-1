@@ -17,9 +17,9 @@ const RSA_PUBLIC_KEY = fs.readFileSync(path.join(__dirname, './../../../keys/jwt
 
 // Database configuration
 export const sequelize = new Sequelize('harizon_travels', 'samdb', 'Shamsudeen123%', {
-    host: '127.0.0.1',
+    host: 'localhost',
     dialect: 'mysql',
-    port: 3306,
+    // port: 3306,
   });
   
   // model for User
