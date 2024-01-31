@@ -287,7 +287,7 @@ export const getTicketList = async (req, res) => {
       // Pagination
       const pageNumber = page ? parseInt(page) : 1;
       const limit = pageSize ? parseInt(pageSize) : 10;
-      const offset = (pageNumber - 1) * limit;
+      // const offset = (pageNumber - 1) * limit;
 
       // Retrieve all flight bookings with associated passengers
       const ticketList = await FlightBooking.findAndCountAll({
@@ -327,7 +327,7 @@ export const getTicketList = async (req, res) => {
           "ticketImageUrl",
         ],
         limit,
-        offset,
+        // offset,
         order: [["createdAt", "DESC"]],
         where: whereCondition, // Assuming whereCondition is defined elsewhere
       });

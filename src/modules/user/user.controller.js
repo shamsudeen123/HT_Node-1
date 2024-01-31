@@ -220,11 +220,11 @@ export const findAllUsers = async (req, res) => {
       }
       
 
-    const offset = (page - 1) * limit;
+    // const offset = (page - 1) * limit;
     const users = await User.findAndCountAll({
       // attributes: { exclude: ['password'] },
       where: whereCondition,
-      offset,
+      // offset,
       limit: parseInt(limit),
       order: [['createdAt', 'DESC']],
     });
