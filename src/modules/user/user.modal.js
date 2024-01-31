@@ -1,4 +1,4 @@
-import { Sequelize } from 'sequelize';
+import { Sequelize, DataTypes } from 'sequelize';
 import * as path from 'path';
 import jwt from 'jsonwebtoken';
 import fs from 'fs';
