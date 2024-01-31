@@ -21,8 +21,8 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 // app.use('/uploads', express.static('uploads/userProfile'));
 
 
-sequelize.sync().then(() => {
-  app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
-});
+// sequelize.sync().then(() => {
+//   app.listen(port, () => {
+//     console.log(`Server is running on port ${port}`);
+//   });
+// });
