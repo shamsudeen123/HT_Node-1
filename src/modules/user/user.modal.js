@@ -16,11 +16,14 @@ const RSA_PRIVATE_KEY = fs.readFileSync(path.join(__dirname, './../../../keys/jw
 const RSA_PUBLIC_KEY = fs.readFileSync(path.join(__dirname, './../../../keys/jwt-public.pub'));
 
 // Database configuration
-export const sequelize = new Sequelize('harizon_travels', 'root', 'Shamsudeen123%', {
-    host: 'localhost',
-    dialect: 'mysql',
-    // port: 3306
-  });
+// export const sequelize = new Sequelize('harizon_travels', 'root', 'Shamsudeen123%', {
+//     host: 'localhost',
+//     dialect: 'mysql',
+//     // port: 3306
+//   });
+
+export const sequelize = new Sequelize('mysql://root:Shamsudeen123%@localhost:3306/harizon_travels');
+
   
   // model for User
   export const User = sequelize.define('User', {
