@@ -22,7 +22,11 @@ const RSA_PUBLIC_KEY = fs.readFileSync(path.join(__dirname, './../../../keys/jwt
 //     // port: 3306
 //   });
 
-export const sequelize = new Sequelize('mysql://root:Shamsudeen123%@localhost:3306/harizon_travels');
+const password = 'Shamsudeen123%';
+const encodedPassword = encodeURIComponent(password);
+
+
+export const sequelize = new Sequelize(`mysql://root:${encodedPassword}@localhost:3306/harizon_travels`);
 
   
   // model for User
