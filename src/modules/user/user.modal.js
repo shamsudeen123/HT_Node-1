@@ -22,12 +22,6 @@ export const sequelize = new Sequelize('harizon_travels', 'root', 'Shamsudeen123
     // port: 3306
   });
 
-// const password = 'Shamsudeen123%';
-// const encodedPassword = encodeURIComponent(password);
-
-
-// export const sequelize = new Sequelize(`mysql://root:${encodedPassword}@localhost:3306/harizon_travels`);
-
   
   // model for User
   export const User = sequelize.define('User', {
