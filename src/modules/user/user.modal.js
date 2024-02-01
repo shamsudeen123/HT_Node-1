@@ -7,6 +7,12 @@ import bcrypt from 'bcrypt';
 
 // // Get the current module's file path
 
+// Database configuration
+export const sequelize = new Sequelize('harizon_travels', 'root', 'Shamsudeen123%', {
+  host: 'localhost',
+  dialect: 'mysql',
+  // port: 3306
+});
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,12 +21,7 @@ const __dirname = path.dirname(__filename);
 const RSA_PRIVATE_KEY = fs.readFileSync(path.join(__dirname, './../../../keys/jwt-private.key'))
 const RSA_PUBLIC_KEY = fs.readFileSync(path.join(__dirname, './../../../keys/jwt-public.pub'));
 
-// Database configuration
-export const sequelize = new Sequelize('harizon_travels', 'root', 'Shamsudeen123%', {
-    host: 'localhost',
-    dialect: 'mysql',
-    // port: 3306
-  });
+
 
   // (async () => {
   //   try {
