@@ -12,6 +12,9 @@ export const sequelize = new Sequelize('harizon_travels', 'root', 'samsudeen', {
   host: 'localhost',
   dialect: 'mysql',
   port: 3306,
+  dialectOptions: {
+    password: 'samsudeen',  // Check for extra spaces around 'your_password'
+  },
 });
 
 const __filename = fileURLToPath(import.meta.url);
