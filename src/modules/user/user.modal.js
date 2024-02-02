@@ -12,10 +12,7 @@ export const sequelize = new Sequelize('harizon_travels', 'root', 'Shamsudeen123
   host: 'localhost',
   dialect: 'mysql',
   port: 3306,
-  dialectOptions: {
-    charset: 'utf8mb4',
-    collate: 'utf8mb4_unicode_ci',
-  },
+  socketPath: '/path/to/mysql/socket'
 });
 
 const __filename = fileURLToPath(import.meta.url);
