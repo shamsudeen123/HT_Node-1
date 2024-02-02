@@ -9,9 +9,9 @@ import bcrypt from 'bcrypt';
 
 // Database configuration
 export const sequelize = new Sequelize('harizon_travels', 'root', '', {
-  host: 'localhost',
+  // host: 'localhost',
   dialect: 'mysql',
-  port: 3306
+  // port: 3306
 });
 
 const __filename = fileURLToPath(import.meta.url);
