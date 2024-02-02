@@ -11,16 +11,7 @@ import bcrypt from 'bcrypt';
 export const sequelize = new Sequelize('harizon_travels', 'root', 'Shamsudeen123%', {
   host: 'localhost',
   dialect: 'mysql',
-  port: 3306,
-  dialectOptions: {
-    ssl: false,
-    authSwitchHandler: (data, callback) => {
-      if (data.pluginName === 'mysql_clear_password') {
-        callback(null, Buffer.from([0]));
-      }
-    },
-    passwordSha256: 'caching_sha2_password', // Add this line
-  },
+  port: 3306
 });
 
 const __filename = fileURLToPath(import.meta.url);
