@@ -11,7 +11,11 @@ import bcrypt from 'bcrypt';
 export const sequelize = new Sequelize('harizon_travels', 'root', 'Shamsudeen123%', {
   host: 'localhost',
   dialect: 'mysql',
-  port: 3306
+  port: 3306,
+  dialectOptions: {
+    charset: 'utf8mb4',
+    collate: 'utf8mb4_unicode_ci',
+  },
 });
 
 const __filename = fileURLToPath(import.meta.url);
@@ -20,6 +24,7 @@ const __dirname = path.dirname(__filename);
 // JWT Keys
 const RSA_PRIVATE_KEY = fs.readFileSync(path.join(__dirname, './../../../keys/jwt-private.key'))
 const RSA_PUBLIC_KEY = fs.readFileSync(path.join(__dirname, './../../../keys/jwt-public.pub'));
+
 
 
 
