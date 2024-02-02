@@ -8,13 +8,10 @@ import bcrypt from 'bcrypt';
 // // Get the current module's file path
 
 // Database configuration
-export const sequelize = new Sequelize('harizon_travels', 'root', 'samsudeen', {
+export const sequelize = new Sequelize('harizon_travels', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
-  port: 3306,
-  dialectOptions: {
-    password: 'samsudeen',  // Check for extra spaces around 'your_password'
-  },
+  port: 3306
 });
 
 const __filename = fileURLToPath(import.meta.url);
