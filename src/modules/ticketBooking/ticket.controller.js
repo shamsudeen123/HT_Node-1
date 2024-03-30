@@ -117,6 +117,8 @@ export const createFlightBooking = async (req, res) => {
           amount,
           ticketStatus,
           ticketImageUrl,
+          passengerName: Passengers[0].givenName + " " + Passengers[0].lastName,
+          updatedBy: payload.name
         });
 
         const existingPassengers = await Passenger.findAll({
@@ -188,6 +190,7 @@ export const createFlightBooking = async (req, res) => {
           amount,
           ticketStatus,
           ticketImageUrl,
+          passengerName: Passengers[0].givenName + " " + Passengers[0].lastName
         });
 
         // Create Passengers associated with the FlightBooking
@@ -242,6 +245,7 @@ export const getTicketList = async (req, res) => {
             [Op.or]: [
               { email: { [Op.like]: `%${searchKeyword}%` } },
               { dealerName: { [Op.like]: `%${searchKeyword}%` } },
+              { passengerName: { [Op.like]: `%${searchKeyword}%` } },
               // Add other fields for searching here
             ],
           };
@@ -275,6 +279,7 @@ export const getTicketList = async (req, res) => {
             ...whereCondition,
             [Op.or]: [
               { email: { [Op.like]: `%${searchKeyword}%` } },
+              { passengerName: { [Op.like]: `%${searchKeyword}%` } },
               { dealerName: { [Op.like]: `%${searchKeyword}%` } },
 
               // Add other fields for searching here
@@ -325,6 +330,8 @@ export const getTicketList = async (req, res) => {
           "amount",
           "ticketStatus",
           "ticketImageUrl",
+          "updatedBy",
+          "passengerName"
         ],
         limit,
         // offset,

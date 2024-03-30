@@ -1,7 +1,13 @@
 import { Sequelize, DataTypes } from "sequelize";
 
 // Database configuration
-export const sequelize = new Sequelize('harizon_travels', 'root', 'samsudeen', {
+// export const sequelize = new Sequelize('harizon_travels', 'root', 'samsudeen', {
+//   host: 'localhost',
+//   dialect: 'mysql',
+//   port: 3306
+// });
+
+export const sequelize = new Sequelize('harizontravels', 'root', 'oneteam@123', {
   host: 'localhost',
   dialect: 'mysql',
   port: 3306
@@ -26,6 +32,10 @@ export const FlightBooking = sequelize.define("FlightBooking", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  passengerName: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   arrival: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -45,6 +55,10 @@ export const FlightBooking = sequelize.define("FlightBooking", {
   dealerName: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  updatedBy: {
+    type: DataTypes.STRING,
+    allowNull: true,
   },
   imagePath: {
     type: DataTypes.STRING,
