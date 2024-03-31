@@ -1,17 +1,17 @@
 import { Sequelize, DataTypes } from "sequelize";
 
 // Database configuration
-// export const sequelize = new Sequelize('harizon_travels', 'root', 'samsudeen', {
-//   host: 'localhost',
-//   dialect: 'mysql',
-//   port: 3306
-// });
-
-export const sequelize = new Sequelize('harizontravels', 'root', 'oneteam@123', {
+export const sequelize = new Sequelize('harizon_travels', 'root', 'samsudeen', {
   host: 'localhost',
   dialect: 'mysql',
   port: 3306
 });
+
+// export const sequelize = new Sequelize('harizontravels', 'root', 'oneteam@123', {
+//   host: 'localhost',
+//   dialect: 'mysql',
+//   port: 3306
+// });
 
 export const FlightBooking = sequelize.define("FlightBooking", {
   email: {
